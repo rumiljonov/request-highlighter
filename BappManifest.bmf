@@ -2,11 +2,11 @@ Uuid: 11729a617d8d4d3b87c82e34b71885c3
 ExtensionType: 1
 Name: request-highlighter
 RepoName: request-highlighter
-ScreenVersion: TODO
-SerialVersion: 0
+ScreenVersion: 0.2
+SerialVersion: 2
 MinPlatformVersion: 0
 ProOnly: False
-Author: TODO
-ShortDescription: TODO
-EntryPoint: build/libs/request-highlighter-all.jar
-BuildCommand: gradle fatJar
+Author: Davide 'TwiceDi' Danelon, BeDefended Srl
+ShortDescription: Automatically highlights different HTTP requests based on headers content
+EntryPoint: build/libs/request-highlighter.jar
+BuildCommand: gradle jar

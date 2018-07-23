@@ -2,8 +2,8 @@ Uuid: 11729a617d8d4d3b87c82e34b71885c3
 ExtensionType: 1
 Name: Request Highlighter
 RepoName: request-highlighter
-ScreenVersion: 0.2
-SerialVersion: 3
+ScreenVersion: 0.3
+SerialVersion: 4
 MinPlatformVersion: 0
 ProOnly: False
 Author: Davide 'TwiceDi' Danelon, BeDefended Srl

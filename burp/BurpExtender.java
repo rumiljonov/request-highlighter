@@ -40,10 +40,12 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 	private IExtensionHelpers helpers;
 	private PrintWriter stdout;
 	
-	private static final String PLUGIN_NAME = "Request Highlighter";
+	private static final String PLUGIN_NAME = "Request Highlighter +";
 	private static final int CHARS_NUMBER = 16;
 	private static final int MIN_LEN = 3;
 	
+	private static final String HEADER_NAME = "fireburp";
+
 	private HashSet<String> colors;	
 	
 	private Map<String, String> tags;
@@ -79,8 +81,17 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
         colors.add("cyan");
         colors.add("gray");
         colors.add("yellow");
+        colors.add("orange");
         
-                
+        tags.put(HEADER_NAME + ": red", "red");
+        tags.put(HEADER_NAME + ": orange", "orange");
+        tags.put(HEADER_NAME + ": yellow", "yellow");
+        tags.put(HEADER_NAME + ": green", "green");
+        tags.put(HEADER_NAME + ": turquoise", "cyan");
+        tags.put(HEADER_NAME + ": blue", "blue");
+        tags.put(HEADER_NAME + ": purple", "pink");
+        tags.put(HEADER_NAME + ": pink", "magenta");
+
         // register as a Proxy listener
         callbacks.registerProxyListener(this);
         
@@ -90,7 +101,7 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 	}
 	
 	private void highlightRequest(IHttpRequestResponse req)
-	{
+	{	
 
 		IRequestInfo request = helpers.analyzeRequest(req.getRequest());
 		
@@ -106,8 +117,14 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 			}
 			
 		}
+
+		req.getRequest()
+		helpers.stringToBytes
+		req.setRequest
 	}
 	
+
+
 	private void removeHighlight(IHttpRequestResponse req, String selectedText)
 	{
 

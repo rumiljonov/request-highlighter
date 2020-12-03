@@ -117,10 +117,6 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 			}
 			
 		}
-
-		req.getRequest()
-		helpers.stringToBytes
-		req.setRequest
 	}
 	
 

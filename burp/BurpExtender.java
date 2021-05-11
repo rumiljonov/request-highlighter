@@ -109,7 +109,7 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 		
 		for (Map.Entry<String, String> entry : tags.entrySet())
 		{
-			if(headers.contains(entry.getKey()))
+			if(headers.toLowerCase().contains(entry.getKey()))
 			{					
 				req.setHighlight(tags.get(entry.getKey()));
 				
@@ -245,7 +245,7 @@ public class BurpExtender implements IBurpExtender, IProxyListener, IContextMenu
 				
 				for (Map.Entry<String, String> entry : tags.entrySet())
 				{
-					if(headers.contains(entry.getKey()))
+					if(headers.toLowerCase().contains(entry.getKey()))
 					{
 												
 						main.add(CreateMenuItem(entry.getValue()+" - "+this.generateLabel(entry.getKey()), entry.getKey(), this));
